@@ -1,4 +1,3 @@
-import { test, expect } from 'vitest';
 import { unique } from './index';
 
 test('unique numbers', () => {

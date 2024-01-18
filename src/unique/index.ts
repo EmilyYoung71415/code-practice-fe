@@ -6,7 +6,7 @@ export function unique1(nums: number[]) {
 export function unique2(nums: number[]) {
   const _set = new Set();
 
-  for(let item of nums) {
+  for (let item of nums) {
     if (!_set.has(item)) {
       _set.add(item);
     }
@@ -19,4 +19,4 @@ export function unique(nums: number[]) {
   return nums.filter((item, index, arr) => {
     return arr.indexOf(item) === index;
   });
-};
+}
