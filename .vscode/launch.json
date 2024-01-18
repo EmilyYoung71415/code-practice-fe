@@ -3,13 +3,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch TS",
-      "type": "node",
+      "type": "node-terminal",
+      "name": "Debug Test File",
       "request": "launch",
-      "runtimeArgs": ["-r", "ts-node/register"],
-      "internalConsoleOptions": "openOnSessionStart",
-      "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/${file}"
+      "command": "npm run test -- ${fileBasenameNoExtension}",
+      "cwd": "${fileDirname}"
     }
   ]
 }
