@@ -1,9 +1,6 @@
 // 实现这样一个函数，传入待执行的promise函数,并发数限制, 实现这样的并发执行函数
-
-import { resolve } from 'path';
-
 // asyncConcurrencyLimit(promiseTasks, limitCount).then(results => { console.log(results)});
-type AsyncTask<T> = () => Promise<T>;
+import type { AsyncTask } from './_util';
 
 // 这个实现比较优雅，但比较不容易想到
 // 核心是：当这个数量达到时，我们使用 Promise.race() 等待其中一个任务完成，然后继续添加更多的任务，直到所有任务都被触发。
